@@ -1,9 +1,5 @@
-import { NewsArticle } from "../../types"
 import * as S from "./styles"
-
-interface NewsArticleCardProps {
-  article: NewsArticle
-}
+import { NewsArticleCardProps } from "./types"
 
 const NewsArticleCard = ({ article }: NewsArticleCardProps) => {
   return (

@@ -1,12 +1,15 @@
 import { NewsArticle } from "../../types"
 import NewsArticleCard from "../newsArticleCard/NewsArticleCard"
 import { StyledNewsArticleList } from "./styles"
+import { NewsArticleListProps } from "./types"
 
-interface NewsArticleListProps {
-  articles: NewsArticle[]
-}
+const NewsArticleList = ({
+  articles,
+  setSelectedNewsArticle,
+}: NewsArticleListProps) => {
+  const clickHandler = (selectedArticle: NewsArticle) =>
+    setSelectedNewsArticle(selectedArticle)
 
-const NewsArticleList = ({ articles }: NewsArticleListProps) => {
   return (
     <StyledNewsArticleList>
       {articles.map((article) => (
