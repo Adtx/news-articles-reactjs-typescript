@@ -1,4 +1,5 @@
 import { NewsArticle } from "../../types"
+import NewsArticleCard from "../newsArticleCard/NewsArticleCard"
 import { StyledNewsArticleList } from "./styles"
 
 interface NewsArticleListProps {
@@ -9,14 +10,7 @@ const NewsArticleList = ({ articles }: NewsArticleListProps) => {
   return (
     <StyledNewsArticleList>
       {articles.map((article) => (
-        <article key={article.url}>
-          <img
-            src={article.urlToImage}
-            style={{ height: "200px", width: "200px" }}
-          />
-          <h2>{article.title}</h2>
-          <p>{article.description}</p>
-        </article>
+        <NewsArticleCard key={article.url} article={article} />
       ))}
     </StyledNewsArticleList>
   )
