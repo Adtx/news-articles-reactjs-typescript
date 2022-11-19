@@ -1,8 +1,8 @@
-export interface ArticleList {
-  articles: Article[]
+export interface NewsArticleList {
+  articles: NewsArticle[]
 }
 
-export interface Article {
+export interface NewsArticle {
   source: Source
   author?: string
   title: string
