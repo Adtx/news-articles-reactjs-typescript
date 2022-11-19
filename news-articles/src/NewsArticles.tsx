@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { fetchNewsArticles } from "./apiUtils"
+import NewsArticleDetails from "./components/newsArticleDetails/NewsArticleDetails"
 import NewsArticleList from "./components/newsArticleList/NewsArticleList"
+import { StyledHeader, StyledNewsArticles, Title } from "./styles"
 import { NewsArticle } from "./types"
 
 const NewsArticles = () => {
@@ -14,12 +16,13 @@ const NewsArticles = () => {
 
   return (
     <>
-      <header>
-        <h1>News Articles</h1>
-      </header>
-      <main>
+      <StyledHeader>
+        <Title>News Articles</Title>
+      </StyledHeader>
+      <StyledNewsArticles>
         <NewsArticleList articles={newsArticleList} />
-      </main>
+        <NewsArticleDetails />
+      </StyledNewsArticles>
     </>
   )
 }

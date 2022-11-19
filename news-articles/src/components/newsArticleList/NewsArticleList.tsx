@@ -1,4 +1,5 @@
 import { NewsArticle } from "../../types"
+import { StyledNewsArticleList } from "./styles"
 
 interface NewsArticleListProps {
   articles: NewsArticle[]
@@ -6,7 +7,7 @@ interface NewsArticleListProps {
 
 const NewsArticleList = ({ articles }: NewsArticleListProps) => {
   return (
-    <>
+    <StyledNewsArticleList>
       {articles.map((article) => (
         <article key={article.url}>
           <img
@@ -17,7 +18,7 @@ const NewsArticleList = ({ articles }: NewsArticleListProps) => {
           <p>{article.description}</p>
         </article>
       ))}
-    </>
+    </StyledNewsArticleList>
   )
 }
 

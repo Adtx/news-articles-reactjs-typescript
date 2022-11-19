@@ -1,7 +1,11 @@
-import React from "react"
+import { StyledNewsArticleDetails } from "./styles"
 
 const NewsArticleDetails = () => {
-  return <h1>NewsArticleDetails</h1>
+  return (
+    <StyledNewsArticleDetails>
+      <h2>News article content...</h2>
+    </StyledNewsArticleDetails>
+  )
 }
 
 export default NewsArticleDetails
