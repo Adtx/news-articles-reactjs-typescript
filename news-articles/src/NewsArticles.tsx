@@ -24,6 +24,7 @@ const NewsArticles = () => {
       <StyledNewsArticles>
         <NewsArticleList
           articles={newsArticleList}
+          selectedNewsArticle={selectedNewsArticle}
           setSelectedNewsArticle={setSelectedNewsArticle}
         />
         <NewsArticleDetails

@@ -29,7 +29,7 @@ export const NewsArticleDetailsPane = ({
             </p>
             <p>
               <span>{"URL: "}</span>
-              <a href={article.url}>{article.url}</a>
+              <a href={article.url}>{"Source article"}</a>
             </p>
             <p>
               <span>{"Author: "}</span>

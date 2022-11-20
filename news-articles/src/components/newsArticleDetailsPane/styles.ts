@@ -11,6 +11,15 @@ export const StyledNewsArticleDetailsPane = styled.article`
   min-height: 98%;
   padding: 1rem;
   width: 85%;
+
+  @media (max-width: 630px) {
+    margin: 5px 5px;
+    width: 95%;
+  }
+
+  @media (max-width: 545px) {
+    align-items: center;
+  }
 `
 
 export const CloseButtonArea = styled.div`
@@ -33,12 +42,32 @@ export const ArticleHeader = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 4%;
+
+  @media (max-width: 545px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const ArticleHeaderImage = styled.img`
   border-radius: 4px;
   height: 300px;
   width: 300px;
+
+  @media (max-width: 1905px) {
+    height: 250px;
+    width: 250px;
+  }
+
+  @media (max-width: 1600px) {
+    height: 200px;
+    width: 200px;
+  }
+
+  @media (max-width: 800px) {
+    height: 185px;
+    width: 185px;
+  }
 `
 export const ArticleHeaderInfo = styled.div`
   display: flex;

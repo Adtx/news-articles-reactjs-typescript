@@ -20,23 +20,26 @@ export const ArticleImageContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 33%;
+
+  @media (max-width: 650px) {
+    align-items: flex-start;
+  }
 `
 
 export const ArticleImage = styled.img`
   border-radius: 4px;
   height: 150px;
   width: 150px;
+
+  @media (max-width: 650px) {
+    height: 125px;
+    width: 125px;
+  }
 `
 
 export const ArticleInfoContainer = styled.div`
   width: 66%;
 `
-
-/* export const UserName = styled.p`
-  font-size: 80%;
-  color: #6c757d;
-  margin-bottom: 0.4rem;
-` */
 
 export const ArticleDescription = styled.p`
   margin-top: 1%;
