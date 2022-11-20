@@ -137,4 +137,5 @@ I used both Jest and RTL for testing because these are the recommended libs for 
 - CSS transitions or animations when opening and closing the news article details pane
 - Search news articles by author and publication date
 - Pagination for the articles list
+- Additional unit tests
 
