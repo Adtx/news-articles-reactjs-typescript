@@ -1,12 +1,20 @@
 import * as S from "./styles"
+import { SlClose } from "react-icons/sl"
 import { NewsArticleDetailsPaneProps } from "./types"
 
 export const NewsArticleDetailsPane = ({
   selectedNewsArticle: article,
   setSelectedNewsArticle,
 }: NewsArticleDetailsPaneProps) => {
+  const closeNewsArticleDetailsPane = () => setSelectedNewsArticle(null)
+
   return (
     <S.StyledNewsArticleDetailsPane>
+      <S.CloseButtonArea>
+        <S.CloseButton onClick={() => closeNewsArticleDetailsPane()}>
+          <SlClose />
+        </S.CloseButton>
+      </S.CloseButtonArea>
       <S.ArticleHeader>
         <S.ArticleHeaderImage src={article.urlToImage} />
         <S.ArticleHeaderInfo>

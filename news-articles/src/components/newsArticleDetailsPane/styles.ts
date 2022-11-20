@@ -10,8 +10,23 @@ export const StyledNewsArticleDetailsPane = styled.article`
   margin: 5px auto;
   min-height: 98%;
   padding: 1rem;
-  padding-top: 4rem;
   width: 85%;
+`
+
+export const CloseButtonArea = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4%;
+`
+
+export const CloseButton = styled.div`
+  & > * {
+    transform: scale(1.5);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 export const ArticleHeader = styled.div`
