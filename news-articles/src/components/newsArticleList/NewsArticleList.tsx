@@ -1,6 +1,9 @@
+import { useContext } from "react"
+import { SelectedArticleContext } from "../../NewsArticles"
 import { NewsArticle } from "../../types"
 import NewsArticleCard from "../newsArticleCard/NewsArticleCard"
-import { StyledNewsArticleList } from "./styles"
+import Search from "../Search/Search"
+import { ArticleNotFoundMessage, StyledNewsArticleList } from "./styles"
 import { NewsArticleListProps } from "./types"
 
 const NewsArticleList = ({
@@ -12,15 +15,29 @@ const NewsArticleList = ({
     setSelectedNewsArticle(selectedArticle)
 
   const articleIsSelected = selectedNewsArticle !== null
+  const { newsArticleList, setFilteredNewsArticleList } = useContext(
+    SelectedArticleContext
+  )
+  const articleListEmpty = articles.length === 0
   return (
     <StyledNewsArticleList articleIsSelected={articleIsSelected}>
-      {articles.map((article) => (
-        <NewsArticleCard
-          key={article.url}
-          article={article}
-          onClick={() => clickHandler(article)}
-        />
-      ))}
+      <Search
+        newsArticleList={newsArticleList!}
+        setFilteredNewsArticleList={setFilteredNewsArticleList!}
+      />
+      {articleListEmpty && (
+        <ArticleNotFoundMessage>
+          Couldn't find an article by that title
+        </ArticleNotFoundMessage>
+      )}
+      {!articleListEmpty &&
+        articles.map((article) => (
+          <NewsArticleCard
+            key={article.url}
+            article={article}
+            onClick={() => clickHandler(article)}
+          />
+        ))}
     </StyledNewsArticleList>
   )
 }
