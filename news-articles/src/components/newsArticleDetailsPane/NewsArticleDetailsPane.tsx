@@ -11,9 +11,12 @@ export const NewsArticleDetailsPane = ({
   const closeNewsArticleDetailsPane = () => setSelectedNewsArticle!(null)
 
   return (
-    <S.StyledNewsArticleDetailsPane>
+    <S.StyledNewsArticleDetailsPane data-testid="newsarticledetails">
       <S.CloseButtonArea>
-        <S.CloseButton onClick={() => closeNewsArticleDetailsPane()}>
+        <S.CloseButton
+          onClick={() => closeNewsArticleDetailsPane()}
+          data-testid="closebutton"
+        >
           <SlClose />
         </S.CloseButton>
       </S.CloseButtonArea>
