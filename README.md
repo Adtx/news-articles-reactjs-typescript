@@ -89,4 +89,52 @@ Happy coding & good luck! 🚀
 
 ---
 ## Development Journal
-_Document your solution here_
+
+### Instructions to run the project locally:
+
+In the project's root folder change directory into the news-articles folder:
+
+### `cd news-articles`
+
+Then run:
+
+### `npm install` or `npm i`
+
+To install all of the project's dependencies.
+
+### `npm start`
+
+To run the app in development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `npm test`
+
+To run the project's tests in interactive watch mode.
+
+### Technical choices (third-party libraries)
+
+- Styled Components
+
+I opted for using styled-components for the styling of the application because of the various advantages that it brings like scoped styles, no-class policy and writing CSS inside jsx/tsx files and also because I'm used to using it in my daily job.
+
+- Jest and React Testing Library(RTL)
+
+I used both Jest and RTL for testing because these are the recommended libs for testing React applications and are the ones that I have experience with.
+
+### Implemented features/technical requirements
+
+- Fetch news articles from the API
+- Display news articles in a list
+- Display news article detailed content when the article is selected
+- Close news article detailed content pane
+- Search/filter news article list by article title
+- Small test suite
+- Responsive web design(no third-party CSS or component libraries)
+- State management (no Redux, use of React Context)
+
+### Possible additional features
+
+- CSS transitions or animations when opening and closing the news article details pane
+- Search news articles by author and publication date
+- Pagination for the articles list
+
