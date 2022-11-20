@@ -1,9 +1,21 @@
+import { NewsArticleDetailsPane } from "../newsArticleDetailsPane/NewsArticleDetailsPane"
 import { StyledNewsArticleDetails } from "./styles"
+import { NewsArticleDetailsProps } from "./types"
 
-const NewsArticleDetails = () => {
+const NewsArticleDetails = ({
+  selectedNewsArticle: article,
+  setSelectedNewsArticle,
+}: NewsArticleDetailsProps) => {
+  const articleIsSelected = article !== null
   return (
-    <StyledNewsArticleDetails>
-      <h2>News article content...</h2>
+    <StyledNewsArticleDetails articleIsSelected={articleIsSelected}>
+      {!article && <h2>Select a news article to view its contens here...</h2>}
+      {article && (
+        <NewsArticleDetailsPane
+          selectedNewsArticle={article}
+          setSelectedNewsArticle={setSelectedNewsArticle}
+        />
+      )}
     </StyledNewsArticleDetails>
   )
 }

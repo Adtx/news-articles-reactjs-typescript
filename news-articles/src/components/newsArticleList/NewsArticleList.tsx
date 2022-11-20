@@ -13,7 +13,11 @@ const NewsArticleList = ({
   return (
     <StyledNewsArticleList>
       {articles.map((article) => (
-        <NewsArticleCard key={article.url} article={article} />
+        <NewsArticleCard
+          key={article.url}
+          article={article}
+          onClick={() => clickHandler(article)}
+        />
       ))}
     </StyledNewsArticleList>
   )

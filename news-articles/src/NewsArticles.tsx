@@ -7,6 +7,8 @@ import { NewsArticle } from "./types"
 
 const NewsArticles = () => {
   const [newsArticleList, setNewsArticleList] = useState<NewsArticle[]>([])
+  const [selectedNewsArticle, setSelectedNewsArticle] =
+    useState<NewsArticle | null>(null)
 
   useEffect(() => {
     fetchNewsArticles().then((newsArticle) => {
@@ -20,8 +22,14 @@ const NewsArticles = () => {
         <Title>News Articles</Title>
       </StyledHeader>
       <StyledNewsArticles>
-        <NewsArticleList articles={newsArticleList} />
-        <NewsArticleDetails />
+        <NewsArticleList
+          articles={newsArticleList}
+          setSelectedNewsArticle={setSelectedNewsArticle}
+        />
+        <NewsArticleDetails
+          selectedNewsArticle={selectedNewsArticle}
+          setSelectedNewsArticle={setSelectedNewsArticle}
+        />
       </StyledNewsArticles>
     </>
   )

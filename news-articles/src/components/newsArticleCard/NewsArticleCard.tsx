@@ -1,9 +1,9 @@
 import * as S from "./styles"
 import { NewsArticleCardProps } from "./types"
 
-const NewsArticleCard = ({ article }: NewsArticleCardProps) => {
+const NewsArticleCard = ({ article, onClick }: NewsArticleCardProps) => {
   return (
-    <S.StyledNewsArticleCard>
+    <S.StyledNewsArticleCard onClick={onClick}>
       <S.ArticleImageContainer>
         <S.ArticleImage src={article.urlToImage} />
       </S.ArticleImageContainer>

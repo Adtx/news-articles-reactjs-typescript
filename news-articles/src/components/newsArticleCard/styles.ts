@@ -8,6 +8,11 @@ export const StyledNewsArticleCard = styled.article`
   margin: 5px auto;
   padding: 1rem;
   width: 85%;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 6px 2px rgba(28, 33, 39, 0.1);
+  }
 `
 
 export const ArticleImageContainer = styled.div`
