@@ -4,18 +4,12 @@ import { NewsArticleDetailsProps } from "./types"
 
 const NewsArticleDetails = ({
   selectedNewsArticle: article,
-  setSelectedNewsArticle,
 }: NewsArticleDetailsProps) => {
   const articleIsSelected = article !== null
   return (
     <StyledNewsArticleDetails articleIsSelected={articleIsSelected}>
       {!article && <h2>Select a news article to view its contens here...</h2>}
-      {article && (
-        <NewsArticleDetailsPane
-          selectedNewsArticle={article}
-          setSelectedNewsArticle={setSelectedNewsArticle}
-        />
-      )}
+      {article && <NewsArticleDetailsPane selectedNewsArticle={article} />}
     </StyledNewsArticleDetails>
   )
 }

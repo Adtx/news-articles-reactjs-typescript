@@ -1,12 +1,14 @@
 import * as S from "./styles"
+import { useContext } from "react"
+import { SelectedArticleContext } from "../../NewsArticles"
 import { SlClose } from "react-icons/sl"
 import { NewsArticleDetailsPaneProps } from "./types"
 
 export const NewsArticleDetailsPane = ({
   selectedNewsArticle: article,
-  setSelectedNewsArticle,
 }: NewsArticleDetailsPaneProps) => {
-  const closeNewsArticleDetailsPane = () => setSelectedNewsArticle(null)
+  const { setSelectedNewsArticle } = useContext(SelectedArticleContext)
+  const closeNewsArticleDetailsPane = () => setSelectedNewsArticle!(null)
 
   return (
     <S.StyledNewsArticleDetailsPane>

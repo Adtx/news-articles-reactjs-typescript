@@ -10,6 +10,7 @@ const NewsArticleList = ({
 }: NewsArticleListProps) => {
   const clickHandler = (selectedArticle: NewsArticle) =>
     setSelectedNewsArticle(selectedArticle)
+
   const articleIsSelected = selectedNewsArticle !== null
   return (
     <StyledNewsArticleList articleIsSelected={articleIsSelected}>
