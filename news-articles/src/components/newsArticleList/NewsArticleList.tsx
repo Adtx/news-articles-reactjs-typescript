@@ -2,9 +2,11 @@ import { useContext } from "react"
 import { SelectedArticleContext } from "../../NewsArticles"
 import { NewsArticle } from "../../types"
 import NewsArticleCard from "../newsArticleCard/NewsArticleCard"
+import { Pagination } from "../Pagination/Pagination"
 import Search from "../Search/Search"
 import { ArticleNotFoundMessage, StyledNewsArticleList } from "./styles"
 import { NewsArticleListProps } from "./types"
+import { NEWS_ARTICLES_PER_PAGE } from "../../NewsArticles"
 
 const NewsArticleList = ({
   articles,
@@ -38,6 +40,7 @@ const NewsArticleList = ({
             onClick={() => clickHandler(article)}
           />
         ))}
+      <Pagination numberOfArticlesPerPage={NEWS_ARTICLES_PER_PAGE} />
     </StyledNewsArticleList>
   )
 }

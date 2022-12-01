@@ -15,7 +15,11 @@ export const SelectedArticleContext = React.createContext<{
   setFilteredNewsArticleList?: React.Dispatch<
     React.SetStateAction<NewsArticle[] | null>
   >
+  setNewsArticlesSliceStart?: React.Dispatch<React.SetStateAction<number>>
+  totalNumberOfArticles?: number
 }>({})
+
+export const NEWS_ARTICLES_PER_PAGE = 20
 
 const NewsArticles = () => {
   const [newsArticleList, setNewsArticleList] = useState<NewsArticle[]>([])
@@ -24,6 +28,7 @@ const NewsArticles = () => {
   const [filteredNewsArticleList, setFilteredNewsArticleList] = useState<
     NewsArticle[] | null
   >(null)
+  const [newsArticlesSliceStart, setNewsArticlesSliceStart] = useState(0)
 
   useEffect(() => {
     fetchNewsArticles().then((newsArticle) => {
@@ -42,11 +47,17 @@ const NewsArticles = () => {
           setSelectedNewsArticle,
           newsArticleList,
           setFilteredNewsArticleList,
+          setNewsArticlesSliceStart,
+          totalNumberOfArticles: (filteredNewsArticleList || newsArticleList)
+            .length,
         }}
       >
         <StyledNewsArticles>
           <NewsArticleList
-            articles={filteredNewsArticleList || newsArticleList}
+            articles={(filteredNewsArticleList || newsArticleList).slice(
+              newsArticlesSliceStart,
+              newsArticlesSliceStart + NEWS_ARTICLES_PER_PAGE
+            )}
             selectedNewsArticle={selectedNewsArticle}
             setSelectedNewsArticle={setSelectedNewsArticle}
           />
