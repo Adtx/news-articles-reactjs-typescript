@@ -1,5 +1,8 @@
 import { NewsArticle } from "../../types"
 
 export interface NewsArticleDetailsPaneProps {
-  selectedNewsArticle: NewsArticle
+  selectedNewsArticle: NewsArticle | null
+}
+export interface StyledNewsArticleDetailsPaneProps {
+  articleSelected: boolean
 }

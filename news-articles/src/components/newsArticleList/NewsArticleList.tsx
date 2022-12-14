@@ -12,9 +12,12 @@ const NewsArticleList = ({
   articles,
   selectedNewsArticle,
   setSelectedNewsArticle,
+  setArticleSelected,
 }: NewsArticleListProps) => {
-  const clickHandler = (selectedArticle: NewsArticle) =>
+  const clickHandler = (selectedArticle: NewsArticle) => {
     setSelectedNewsArticle(selectedArticle)
+    setArticleSelected(true)
+  }
 
   const articleIsSelected = selectedNewsArticle !== null
   const { newsArticleList, setFilteredNewsArticleList } = useContext(

@@ -6,6 +6,7 @@ export interface NewsArticleListProps {
   setSelectedNewsArticle: React.Dispatch<
     React.SetStateAction<NewsArticle | null>
   >
+  setArticleSelected: React.Dispatch<React.SetStateAction<boolean>>
 }
 export interface StyledNewsArticleListProps {
   articleIsSelected: boolean

@@ -1,24 +1,30 @@
 import styled from "styled-components"
+import { StyledNewsArticleDetailsPaneProps } from "./types"
 
-export const StyledNewsArticleDetailsPane = styled.article`
+export const StyledNewsArticleDetailsPane = styled.article<StyledNewsArticleDetailsPaneProps>`
   background: #fff;
   border: 1px solid #eaeaea;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  left: ${(props) => (props.articleSelected ? "72px" : "100%")};
   margin: 5px auto;
   min-height: 98%;
   padding: 1rem;
+  position: absolute;
+  transition: left 0.2s ease-in;
   width: 85%;
 
   @media (max-width: 630px) {
     margin: 5px 5px;
+    position: initial;
     width: 95%;
   }
 
   @media (max-width: 545px) {
     align-items: center;
+    position: initial;
   }
 `
 

@@ -7,15 +7,13 @@ import { StyledHeader, StyledNewsArticles, Title } from "./styles"
 import { NewsArticle } from "./types"
 
 export const SelectedArticleContext = React.createContext<{
-  selectedNewsArticle?: NewsArticle | null
-  setSelectedNewsArticle?: React.Dispatch<
-    React.SetStateAction<NewsArticle | null>
-  >
   newsArticleList?: NewsArticle[]
   setFilteredNewsArticleList?: React.Dispatch<
     React.SetStateAction<NewsArticle[] | null>
   >
+  articleSelected?: boolean
   setNewsArticlesSliceStart?: React.Dispatch<React.SetStateAction<number>>
+  setArticleSelected?: React.Dispatch<React.SetStateAction<boolean>>
   totalNumberOfArticles?: number
 }>({})
 
@@ -28,6 +26,7 @@ const NewsArticles = () => {
   const [filteredNewsArticleList, setFilteredNewsArticleList] = useState<
     NewsArticle[] | null
   >(null)
+  const [articleSelected, setArticleSelected] = useState(false)
   const [newsArticlesSliceStart, setNewsArticlesSliceStart] = useState(0)
 
   useEffect(() => {
@@ -43,8 +42,8 @@ const NewsArticles = () => {
       </StyledHeader>
       <SelectedArticleContext.Provider
         value={{
-          selectedNewsArticle,
-          setSelectedNewsArticle,
+          articleSelected,
+          setArticleSelected,
           newsArticleList,
           setFilteredNewsArticleList,
           setNewsArticlesSliceStart,
@@ -60,8 +59,12 @@ const NewsArticles = () => {
             )}
             selectedNewsArticle={selectedNewsArticle}
             setSelectedNewsArticle={setSelectedNewsArticle}
+            setArticleSelected={setArticleSelected}
           />
-          <NewsArticleDetails selectedNewsArticle={selectedNewsArticle} />
+          <NewsArticleDetails
+            selectedNewsArticle={selectedNewsArticle}
+            articleSelected={articleSelected}
+          />
         </StyledNewsArticles>
       </SelectedArticleContext.Provider>
     </>
