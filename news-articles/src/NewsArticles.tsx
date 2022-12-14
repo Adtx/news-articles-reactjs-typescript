@@ -17,7 +17,7 @@ export const SelectedArticleContext = React.createContext<{
   totalNumberOfArticles?: number
 }>({})
 
-export const NEWS_ARTICLES_PER_PAGE = 20
+export const NEWS_ARTICLES_PER_PAGE = 5
 
 const NewsArticles = () => {
   const [newsArticleList, setNewsArticleList] = useState<NewsArticle[]>([])
