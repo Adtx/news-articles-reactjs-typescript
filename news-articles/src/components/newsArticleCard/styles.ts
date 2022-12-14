@@ -1,11 +1,13 @@
 import styled from "styled-components"
+import { StyledNewsArticleCardProps } from "./types"
 
-export const StyledNewsArticleCard = styled.article`
+export const StyledNewsArticleCard = styled.article<StyledNewsArticleCardProps>`
   background: #fff;
   border: 1px solid #eaeaea;
   border-radius: 5px;
   display: flex;
   margin: 5px auto;
+  opacity: ${(props) => (props.checked ? "0.65" : "1")};
   padding: 1rem;
   width: 85%;
 
