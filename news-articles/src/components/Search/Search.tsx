@@ -1,13 +1,16 @@
-import React, { useRef, useState } from "react"
+import React, { useContext, useRef } from "react"
 import * as S from "./styles"
 import { TfiSearch } from "react-icons/tfi"
 import { SearchProps } from "./types"
+import { SelectedArticleContext } from "../../NewsArticles"
 
 const Search = ({
   newsArticleList,
   setFilteredNewsArticleList,
 }: SearchProps) => {
   let timeoutId = useRef<NodeJS.Timeout | null>(null)
+
+  const { setNewsArticlesSliceStart } = useContext(SelectedArticleContext)
 
   const inputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (timeoutId && timeoutId.current) clearTimeout(timeoutId.current)
@@ -22,10 +25,10 @@ const Search = ({
       article.title.toLowerCase().includes(inputValue.toLowerCase())
     )
 
-    timeoutId.current = setTimeout(
-      () => setFilteredNewsArticleList(filteredNewsArticleList),
-      500
-    )
+    timeoutId.current = setTimeout(() => {
+      setFilteredNewsArticleList(filteredNewsArticleList)
+      setNewsArticlesSliceStart!(0)
+    }, 500)
   }
 
   return (
