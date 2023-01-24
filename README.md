@@ -2,7 +2,7 @@
 
 > ### ⚠️ Read it first!
 > The purpose of this challenge is to give us an idea about your coding skills.
-> At New Work we value well structured and tested code. Semantic HTML, modern and responsive CSS, a consistent coding style and a structured code base are important to us.
+> We value well structured and tested code. Semantic HTML, modern and responsive CSS, a consistent coding style and a structured code base are important to us.
 > I know... you probably love to code (we also love it!). But please, read this file until the end and make sure you understand the requirements before you start coding! If you have any questions, just let us know!
 
 ### Challenge
@@ -92,26 +92,34 @@ Happy coding & good luck! 🚀
 
 ### Instructions to run the project locally:
 
-In the project's root folder change directory into the news-articles folder:
+#### Open a terminal in the project's root folder and change directory into the api folder: 
 
-### `cd news-articles`
+#### `cd api`
 
-Then run:
+#### Then run:
 
-### `npm install` or `npm i`
+#### `npm run api`
 
-To install all of the project's dependencies.
+#### Open a new terminal in project's root folder and change directory into the news-articles folder:
 
-### `npm start`
+#### `cd ../news-articles/`
+
+#### Then run:
+
+#### `npm install` or `npm i`
+
+#### To install all of the project's dependencies.
+
+#### `npm start`
 
 To run the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm test`
+#### `npm test`
 
 To run the project's tests in interactive watch mode.
 
-### Technical choices (third-party libraries)
+#### Technical choices (third-party libraries)
 
 - Styled Components
 
@@ -134,8 +142,8 @@ I used both Jest and RTL for testing because these are the recommended libs for 
 
 ### Possible additional features
 
-- CSS transitions or animations when opening and closing the news article details pane
+- <s>CSS transitions or animations when opening and closing the news article details pane</s> (done)
 - Search news articles by author and publication date
-- Pagination for the articles list
+- <s>Pagination for the articles list</s> (done)
 - Additional unit tests
 
