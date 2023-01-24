@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { fetchNewsArticles } from "./apiUtils"
-import NewsArticleDetails from "./components/newsArticleDetails/NewsArticleDetails"
-import NewsArticleList from "./components/newsArticleList/NewsArticleList"
+import NewsArticleDetails from "./components/NewsArticleDetails"
+import NewsArticleList from "./components/NewsArticleList"
 import styled from "styled-components"
 
 const StyledHeader = styled.header`

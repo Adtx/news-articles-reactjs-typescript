@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { NewsArticle, SelectedArticleContext } from "../../NewsArticles"
+import { NewsArticle, SelectedArticleContext } from "../NewsArticles"
 import { SlClose } from "react-icons/sl"
 import styled from "styled-components"
 

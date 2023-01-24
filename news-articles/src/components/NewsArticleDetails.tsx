@@ -1,6 +1,6 @@
-import { NewsArticleDetailsPane } from "../newsArticleDetailsPane/NewsArticleDetailsPane"
+import { NewsArticleDetailsPane } from "./NewsArticleDetailsPane"
 import styled from "styled-components"
-import { NewsArticle } from "../../NewsArticles"
+import { NewsArticle } from "../NewsArticles"
 
 const StyledNewsArticleDetails = styled.div<StyledNewsArticleDetailsProps>`
   align-items: ${(props) =>

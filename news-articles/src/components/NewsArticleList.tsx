@@ -1,10 +1,10 @@
 import { useContext } from "react"
-import { SelectedArticleContext } from "../../NewsArticles"
-import { NewsArticle } from "../../NewsArticles"
-import NewsArticleCard from "../newsArticleCard/NewsArticleCard"
-import { Pagination } from "../Pagination/Pagination"
-import Search from "../Search/Search"
-import { NEWS_ARTICLES_PER_PAGE } from "../../NewsArticles"
+import { SelectedArticleContext } from "../NewsArticles"
+import { NewsArticle } from "../NewsArticles"
+import NewsArticleCard from "./NewsArticleCard"
+import { Pagination } from "./Pagination"
+import Search from "./Search"
+import { NEWS_ARTICLES_PER_PAGE } from "../NewsArticles"
 import styled from "styled-components"
 
 const StyledNewsArticleList = styled.div<StyledNewsArticleListProps>`

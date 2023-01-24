@@ -1,6 +1,6 @@
 import { useState } from "react"
 import styled from "styled-components"
-import { NewsArticle } from "../../NewsArticles"
+import { NewsArticle } from "../NewsArticles"
 
 const StyledNewsArticleCard = styled.article<StyledNewsArticleCardProps>`
   background: #fff;

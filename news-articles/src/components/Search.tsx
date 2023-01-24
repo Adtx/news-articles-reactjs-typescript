@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from "react"
 import { TfiSearch } from "react-icons/tfi"
-import { NewsArticle, SelectedArticleContext } from "../../NewsArticles"
+import { NewsArticle, SelectedArticleContext } from "../NewsArticles"
 import styled from "styled-components"
 
 const SearchInputContainer = styled.div`

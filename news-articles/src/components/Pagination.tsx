@@ -1,4 +1,4 @@
-import { SelectedArticleContext } from "../../NewsArticles"
+import { SelectedArticleContext } from "../NewsArticles"
 import { useContext } from "react"
 import styled from "styled-components"
 
