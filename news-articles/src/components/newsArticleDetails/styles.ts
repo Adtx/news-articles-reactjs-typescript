@@ -9,6 +9,7 @@ export const StyledNewsArticleDetails = styled.div<StyledNewsArticleDetailsProps
   justify-content: center;
   height: 100%;
   overflow: auto;
+  overflow-x: hidden;
   position: relative;
   width: 50%;
 
