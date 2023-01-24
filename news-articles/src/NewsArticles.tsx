@@ -14,6 +14,9 @@ export const SelectedArticleContext = React.createContext<{
   articleSelected?: boolean
   setNewsArticlesSliceStart?: React.Dispatch<React.SetStateAction<number>>
   setArticleSelected?: React.Dispatch<React.SetStateAction<boolean>>
+  setSelectedNewsArticle?: React.Dispatch<
+    React.SetStateAction<NewsArticle | null>
+  >
   totalNumberOfArticles?: number
 }>({})
 
@@ -44,6 +47,7 @@ const NewsArticles = () => {
         value={{
           articleSelected,
           setArticleSelected,
+          setSelectedNewsArticle,
           newsArticleList,
           setFilteredNewsArticleList,
           setNewsArticlesSliceStart,

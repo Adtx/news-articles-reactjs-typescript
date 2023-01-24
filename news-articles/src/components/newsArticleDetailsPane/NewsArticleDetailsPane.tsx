@@ -7,10 +7,13 @@ import { NewsArticleDetailsPaneProps } from "./types"
 export const NewsArticleDetailsPane = ({
   selectedNewsArticle: article,
 }: NewsArticleDetailsPaneProps) => {
-  const { articleSelected, setArticleSelected } = useContext(
-    SelectedArticleContext
-  )
-  const closeNewsArticleDetailsPane = () => setArticleSelected!(false)
+  const { articleSelected, setArticleSelected, setSelectedNewsArticle } =
+    useContext(SelectedArticleContext)
+
+  const closeNewsArticleDetailsPane = () => {
+    setArticleSelected!(false)
+    setSelectedNewsArticle!(null)
+  }
 
   return (
     <S.StyledNewsArticleDetailsPane
