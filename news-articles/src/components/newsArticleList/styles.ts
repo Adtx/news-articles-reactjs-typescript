@@ -37,7 +37,7 @@ export const StyledNewsArticleList = styled.div<StyledNewsArticleListProps>`
   }
 `
 export const ArticleNotFoundMessage = styled.h2`
+  left: 10%;
   position: fixed;
   top: 25%;
-  left: 10%;
 `

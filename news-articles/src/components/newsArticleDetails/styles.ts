@@ -6,16 +6,16 @@ export const StyledNewsArticleDetails = styled.div<StyledNewsArticleDetailsProps
     props.articleIsSelected ? "flex-start" : "center"};
   border-left: 1px solid #000;
   display: flex;
-  justify-content: center;
   height: 100%;
+  justify-content: center;
   overflow: auto;
   overflow-x: hidden;
   position: relative;
   width: 50%;
 
   @media (max-width: 1300px) {
-    display: ${(props) => (props.articleIsSelected ? "flex" : "none")};
     border: none;
+    display: ${(props) => (props.articleIsSelected ? "flex" : "none")};
     width: 65%;
   }
 

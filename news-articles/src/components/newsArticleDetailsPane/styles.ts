@@ -50,8 +50,8 @@ export const ArticleHeader = styled.div`
   margin-bottom: 4%;
 
   @media (max-width: 545px) {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
 `
 
