@@ -1,5 +1,5 @@
 import axios from "axios"
-import { NewsArticle } from "./types"
+import { NewsArticle } from "./NewsArticles"
 
 export const NEWS_ARTICLES_API_BASE_URL = "http://127.0.0.1:8000/v1/news"
 const NEWS_ARTICLE_TITLE = ""

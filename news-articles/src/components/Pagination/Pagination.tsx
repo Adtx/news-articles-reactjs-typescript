@@ -1,7 +1,28 @@
 import { SelectedArticleContext } from "../../NewsArticles"
-import { PageButton, StyledPagination } from "./styles"
-import { PaginationProps } from "./types"
 import { useContext } from "react"
+import styled from "styled-components"
+
+const StyledPagination = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+  width: 35%;
+`
+
+const PageButton = styled.div`
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  margin: 0 2.5px;
+  padding: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+`
+interface PaginationProps {
+  numberOfArticlesPerPage: number
+}
 
 export const Pagination = ({ numberOfArticlesPerPage }: PaginationProps) => {
   const { setNewsArticlesSliceStart, totalNumberOfArticles } = useContext(
