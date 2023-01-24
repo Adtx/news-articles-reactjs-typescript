@@ -12,13 +12,6 @@ export const Pagination = ({ numberOfArticlesPerPage }: PaginationProps) => {
     totalNumberOfArticles! / numberOfArticlesPerPage +
     (totalNumberOfArticles! % numberOfArticlesPerPage ? 1 : 0)
 
-  console.log({
-    totalNumberOfArticles,
-    numberOfArticlesPerPage,
-    remainder: totalNumberOfArticles! % numberOfArticlesPerPage,
-    numberOfPages,
-  })
-
   const handleClick = (index: number) =>
     setNewsArticlesSliceStart!((index - 1) * numberOfArticlesPerPage)
 
